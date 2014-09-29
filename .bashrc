@@ -27,6 +27,8 @@ export EDITOR=emacs
 ###########################################################################
 # Set Other
 
+export PATH=~/utilities/bin:$PATH
+
 # Chromium build tools
 export PATH=~/depot_tools:$PATH
 

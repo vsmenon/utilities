@@ -17,6 +17,7 @@ if [ "$PS1" ]; then
 
     # Mac
     alias aquamacs='/Applications/Aquamacs.app/Contents/MacOS/Aquamacs'
+    alias atom='/Applications/Atom.app/Contents/MacOS/Atom'
 
     # set a fancy prompt
     PS1='[\H:`pwd`] '

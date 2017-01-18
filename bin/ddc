@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+BASENAME=${1%.*}
+shift
+export NODE_PATH=$DDC_PATH/lib/js/common:.:$NODE_PATH
+dart  $DDC_PATH/bin/dartdevc.dart --dart-sdk-summary $DDC_PATH/lib/sdk/ddc_sdk.sum $* --modules node -o $BASENAME.js $BASENAME.dart
+node -e "require(\"dart_sdk\")._isolate_helper.startRootIsolate(require(\"$BASENAME\").$BASENAME.main, [])"
+
